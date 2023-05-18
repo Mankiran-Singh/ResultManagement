@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<app-button></app-button>
+<form [formGroup]="studentForm" (ngSubmit)="studentDetails()">
+    <h6>Final Result</h6>
+
+     <label for="rollNo">Roll No.</label>
+     <input type="number" id="rollNo" formControlName="rollNo" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+     <br>
+     <span style="color:rgb(172, 21, 21)"*ngIf="rollNo && rollNo.invalid && rollNo.errors?.['required'] && showErrors">This field is not valid</span><br>
+    
+     <label for="name">Name</label>&nbsp;
+     <input type="text" id="name" formControlName="name">
+     <br><span style="color:rgb(126, 14, 14)"*ngIf="name && name.invalid && name.errors?.['required'] && showErrors">This field is not valid</span>
+     <span style="color:rgb(126, 14, 14)"*ngIf="name.invalid && (name.dirty || name.touched) && name.errors.pattern">This field is not valid</span>
+     <br>
+    
+     <button type="submit" class="btn btn-primary">Search</button>&nbsp;&nbsp;
+     <button type="button"  class="btn btn-light" (click)="clear()">Clear</button>
+</form>

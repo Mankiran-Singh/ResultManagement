@@ -1,0 +1,55 @@
+{
+  "teacher": [
+    {
+      "name": "Mankiran",
+      "rollNo": 1,
+      "dob": "2023-05-16",
+      "score": 92,
+      "id": 1
+    },
+    {
+      "name": "Dhruv",
+      "rollNo": 2,
+      "dob": "2023-06-16",
+      "score": 90,
+      "id": 2
+    },
+    {
+      "name": "neelesh",
+      "rollNo": "3",
+      "dob": "2023-05-18",
+      "score": 93,
+      "id": 3
+    },
+    {
+      "name": "Aditya",
+      "rollNo": "4",
+      "dob": "2023-05-24",
+      "score": 130,
+      "id": 4
+    },
+    {
+      "name": "Avtar",
+      "rollNo": 6,
+      "dob": "2023-05-11",
+      "score": 80,
+      "id": 5
+    }
+  ],
+  "result": [
+    {
+      "name": "Mankiran",
+      "rollNo": 1,
+      "dob": "2023-05-16",
+      "score": 92,
+      "id": 1
+    },
+    {
+      "name": "Dhruv",
+      "rollNo": 2,
+      "dob": "2023-06-16",
+      "score": 90,
+      "id": 2
+    }
+  ]
+}

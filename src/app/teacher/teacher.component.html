@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<form [formGroup]="teacherForm" (ngSubmit)="teacherDetails()">
+    <h6>Final Result</h6>
+
+    <label for="rollNo">Roll No.</label>
+    <input type="number" id="rollNo" formControlName="rollNo" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+     <br>
+     <span style="color:rgb(146, 4, 4)"*ngIf="rollNo && rollNo.invalid && rollNo.errors?.['required'] && showErrors">This field is not valid</span><br>
+     
+     <label for="name">Name</label>&nbsp;
+    <input type="text" id="name" formControlName="name">
+    <br> 
+    <span style="color:rgb(144, 16, 16)"*ngIf="name && name.invalid && name.errors?.['required'] && showErrors">This field is not valid</span>
+    <span style="color:rgb(126, 14, 14)"*ngIf="name && name.invalid && (name.dirty || name.touched) && name.errors?.['pattern']">This field is not valid</span><br>
+   
+    
+    <label for="dob">Date of Birth</label>&nbsp;
+    <input type="date" id="dob" formControlName="dob">
+    <br> <span style="color:rgb(149, 15, 15)"*ngIf="dob && dob.invalid && dob.errors?.['required'] && showErrors">This field is not valid</span><br>
+   
+     
+    <label for="score">Score</label>&nbsp;
+    <input type="number" id="name" formControlName="score"oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+    <br> <span style="color:rgb(121, 9, 9)"*ngIf="score && score.invalid && score.errors?.['required'] && showErrors">This field is not valid</span><br>
+   
+    <input class="btn btn-primary" type="submit" value="{{editMode ? 'Update' : 'Submit'}}">&nbsp;&nbsp;
+    <button type="button" class="btn btn-light" (click)="clear()">Clear</button>
+</form>

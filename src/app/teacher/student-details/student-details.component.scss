@@ -1,0 +1,28 @@
+
+  table {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top:20px;
+    left:200px;
+    width: 500px;
+  }
+  
+  td,th {
+    border: 1px solid #ddd;
+  }
+
+  button{
+    position: relative;
+    left:600px;
+    top:10px;
+  }
+
+  .fa-pencil{
+    color: blue;
+    position: relative;
+    right: 10px;
+  }
+  .fa-times{
+    color:red;
+  }
